@@ -31,12 +31,20 @@ router.get('/', function (req, res) {
 
 var nominations: INomination[] = [];
 router.get('/nomination', function (req, res) {
-    let n: INomination = {
-        name: 'some name',
-        approves: 0,
-        vetoes: 99
+    res.json(nominations);
+});
+
+router.post('/nomination', function (req, res) {
+    let body = req.body;
+	let n: INomination = {
+        name: body.name,
+        approves: body.approves,
+        vetoes: body.vetoes
     };
     nominations.push(n);
+	while(nominations.length > 1000){
+		nominations.shift();
+	}
     res.json(nominations);
 });
 
