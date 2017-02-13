@@ -1,3 +1,4 @@
 # LunchPollApi
-Compile : ./node_modules/typescript/bin/tsc server.ts
-Run : node server.js
+Install: `npm install`
+Compile : `./node_modules/typescript/bin/tsc server.ts`
+Run : `node server.js`
