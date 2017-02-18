@@ -38,3 +38,6 @@ jspm_packages
 
 #compiled javascript
 *.js
+
+#visual studio files
+.vs
