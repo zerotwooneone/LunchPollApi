@@ -47,7 +47,7 @@ router.patch('/nomination/approve', (req, res) => {
 
 router.patch('/nomination/veto', (req, res) => {
     let body = req.body;
-    let nomination = nominationRepository.approve(body.id);
+    let nomination = nominationRepository.veto(body.id);
     res.json(nomination);
 });
 
